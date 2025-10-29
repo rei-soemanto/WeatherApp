@@ -27,6 +27,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.weatherapp.R
 import com.example.weatherapp.ui.model.WeatherModel
+import com.example.weatherapp.ui.viewmodel.formatUnixTimestamp
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -73,7 +74,9 @@ fun SuccessState(data: WeatherModel) {
             fontSize = 14.sp,
             color = Color.Gray
         )
+
         Spacer(modifier = Modifier.height(100.dp))
+
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxWidth(),
@@ -109,7 +112,7 @@ fun SuccessState(data: WeatherModel) {
                 "clear" -> R.drawable.blue_and_black_bold_typography_quote_poster_3
                 "rain" -> R.drawable.blue_and_black_bold_typography_quote_poster_2
                 "clouds" -> R.drawable.blue_and_black_bold_typography_quote_poster
-                else -> R.drawable.blue_and_black_bold_typography_quote_poster_3
+                else -> R.drawable.blue_and_black_bold_typography_quote_poster_2
             }
             Image(
                 painter = painterResource(id = pandaImage),
@@ -140,7 +143,9 @@ fun SuccessState(data: WeatherModel) {
                 value = "${data.main.feels_like.roundToInt()}°"
             )
         }
+
         Spacer(modifier = Modifier.height(16.dp))
+
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly

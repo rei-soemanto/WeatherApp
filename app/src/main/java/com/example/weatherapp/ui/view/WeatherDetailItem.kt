@@ -39,7 +39,9 @@ fun RowScope.WeatherDetailItem(iconId: Int, label: String, value: String) {
                 tint = Color.White,
                 modifier = Modifier.size(24.dp)
             )
+
             Spacer(modifier = Modifier.height(8.dp))
+
             Text(text = label, fontSize = 12.sp, color = Color.LightGray)
             Text(
                 text = value,

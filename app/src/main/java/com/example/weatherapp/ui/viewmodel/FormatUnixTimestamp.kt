@@ -1,4 +1,4 @@
-package com.example.weatherapp.ui.view
+package com.example.weatherapp.ui.viewmodel
 
 import java.time.Instant
 import java.time.ZoneId
